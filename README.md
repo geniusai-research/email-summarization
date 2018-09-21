@@ -28,6 +28,20 @@ This code in this repository compliments [this Medium article](https://medium.co
   wget -P ./skip-thoughts/models http://www.cs.toronto.edu/~rkiros/models/uni_skip.npz.pkl
   wget -P ./skip-thoughts/models http://www.cs.toronto.edu/~rkiros/models/bi_skip.npz
   wget -P ./skip-thoughts/models http://www.cs.toronto.edu/~rkiros/models/bi_skip.npz.pkl
+  ``` 
+- Verify the MD5 hashes of the downloaded files to ensure that the files haven't been corrupted during the download. Do:
+  ```
+  md5sum skip-thoughts/models/*
+  ```
+  The output should be:
+  ```
+  9a15429d694a0e035f9ee1efcb1406f3 bi_skip.npz
+  c9b86840e1dedb05837735d8bf94cee2 bi_skip.npz.pkl
+  022b5b15f53a84c785e3153a2c383df6 btable.npy
+  26d8a3e6458500013723b380a4b4b55e dictionary.txt
+  8eb7c6948001740c3111d71a2fa446c1 uni_skip.npz
+  e1a0ead377877ff3ea5388bb11cfe8d7 uni_skip.npz.pkl
+  5871cc62fc01b79788c79c219b175617 utable.npy
   ```
 - Change `Lines:23-24` in the file `skip-thoughts/skipthoughts.py` to provide the correct paths to the downloaded models.
   ```
